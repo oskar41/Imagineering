@@ -59,7 +59,7 @@ $(document).ready(function() {
 	var swiperNew = new Swiper('.slider-new .swiper-container-new', {
       slidesPerView: 4,
       spaceBetween: 30,
-      //loop: true,
+      loop: true,
       
       breakpoints: {
         1024: {
@@ -81,7 +81,7 @@ $(document).ready(function() {
     var swiperStock = new Swiper('.slider-stock .swiper-container-stock', {
       slidesPerView: 4,
       spaceBetween: 30,
-      //loop: true,
+      loop: true,
 
       breakpoints: {
         1024: {
@@ -127,7 +127,6 @@ $(document).ready(function() {
 	}
 
 	window.onresize = function(event) {
-		console.log($(window).width()<480)
 	    if($(window).width()<480){
 	    	$('.tab-featured img').attr('src', '/images/mob-feat.jpg')
 		}else{
