@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Imagineering Studio Task</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+	<link rel="stylesheet" href="node_modules/swiper/dist/css/swiper.min.css">
+</head>
+<body>
+
+	<header>
+		<div class="wrapper">
+			<div class="left-group">
+				<div class="menu">
+					<a href="#" class="menu-button" id="menuButton">
+					    <span class="burger-icon"></span>
+					</a>
+				</div>
+				<div class="search">
+					<a href="#"><img src="images/search.png" alt=""></a>
+				</div>
+			</div>
+			
+			<div class="logo">
+				<a href="#"><img src="images/logo.png" alt=""></a>
+			</div>
+			<div class="right-group">
+				<a href="#" class="phone"><img src="images/phone.png" alt=""></a>
+				<a href="#" class="login"><img src="images/login.png" alt=""></a>
+				<a href="#" class="cart">
+					<img src="images/cart.png" alt="">
+				</a>
+			</div>
+		</div>
+		<div class="lang-block">
+			<span >Ru</span>
+			<span >Ua</span>
+			<span >En</span>			
+		</div>
+		<div class="reg-form">
+			<form > 
+				<div class='form-row'>
+		    		<input type='text' id='form_fname' name='first_name' placeholder="Имя">
+		  		</div>
+
+		  		<div class='form-row'>
+		    		<input type='text' id='form_sname' name='second_name' placeholder="Организация">
+				</div>
+
+				<div class='form-row'>
+					<input type='email' id='form_email' name='email' placeholder="Email">
+				</div>
+
+				<div class='form-row'>
+					<input type='text' id='form_phone' name='phone' placeholder="Телефон">
+				</div>
+				<div class='form-row'>
+					<input type="password" id="password" name="password"  placeholder="Пароль" /> 
+				</div>	
+				<div class="form-row form-row-submit">
+					<input type="submit" value='Отправить'>
+				</div>
+				<p class="change_link">
+					Уже есть аккаунт?
+					<SPAN href="#toregister" class="to_login">Войти</span>
+				</p>
+			</form>
+		</div>
+		<div class="log-form">
+			<form class="clearfix"> 
+				<div class='form-row'>
+					<input type='email' id='form_email' name='email' placeholder="Email">
+				</div>
+				<div class='form-row'>
+					<input type="password" id="password" name="password"  placeholder="Пароль" /> 
+				</div>	
+				<div class="form-row form-row-submit">
+					<input type="submit" value='Войти'>
+				</div>
+				<div class="form-row form-row-pass">
+					<span>Забыли пароль?</span>	
+				</div>
+				<p class="change_link">
+					Нет учетной записи?
+					<SPAN href="#toregister" class="to_register">Зарегистрироваться</span>
+				</p>
+			</form>
+		</div>
+		<div class="cart-form">
+			<div class="products">
+				<div class="product">
+					<img class="product-image" src="images/product.jpg" alt="">
+					<div class="count">
+						<span href="#">+</span>
+						<span href="#">1</span>
+						<span href="#">-</span>
+					</div>
+					<div class="descr">
+						<div class="name">Ваза Клариса</div>
+						<div class="art">2439725</div>
+					</div>
+					<div class="price">27 грн</div>
+					<div class="close">
+						<img src="images/close.png"></img>
+					</div>
+				</div>
+
+				<div class="product">
+					<img class="product-image" src="images/product.jpg" alt="">
+					<div class="count">
+						<span href="#">+</span>
+						<span href="#">2</span>
+						<span href="#">-</span>
+					</div>
+					<div class="descr">
+						<div class="name">Ваза Клариса</div>
+						<div class="art">2439725</div>
+					</div>
+					<div class="price">54 грн</div>
+					<div class="close">
+						<img src="images/close.png"></img>
+					</div>
+				</div>
+			</div>
+			<div class="buy">
+				Итого: 81 Грн
+				<button class="btn">Оформить заказ</button>
+			</div>
+		</div>
+	</header>
+	<main>
+		<container class="region-featured">
+			<div class="wrapper">
+				<div class="swiper-container">
+				 	<div class="swiper-pagination"></div>
+				    <div class="swiper-wrapper">
+				      <div class="swiper-slide">
+				      		<img src="images/head_slide.jpg" alt="">
+				      		<div class="wrap">
+				      			<p class="title">декор</p>
+					      		<p class="sub-title"></p>
+					      		<button class='btn'>ознакомиться</button>
+				      		</div>
+				      </div>
+				      <div class="swiper-slide">
+				      		<img src="images/head_slide.jpg" alt="">
+				      		<div class="wrap">
+				      			<p class="title">керамика</p>
+					      		<p class="sub-title">для кухни</p>
+					      		<button class='btn'>ознакомиться</button>
+				      		</div>
+				      </div>
+				      <div class="swiper-slide">
+				      		<img src="images/head_slide.jpg" alt="">
+				      		<div class="wrap">
+				      			<p class="title">лепка</p>
+					      		<p class="sub-title">ручной работы</p>
+					      		<button class='btn'>ознакомиться</button>
+				      		</div>
+				      </div>
+				      <div class="swiper-slide">
+				      		<img src="images/head_slide.jpg" alt="">
+				      		<div class="wrap">
+				      			<p class="title">винные наборы</p>
+					      		<p class="sub-title"></p>
+					      		<button class='btn'>ознакомиться</button>
+				      		</div>
+				      </div>
+				      <div class="swiper-slide">
+				      		<img src="images/head_slide.jpg" alt="">
+				      		<div class="wrap">
+				      			<p class="title">камень</p>
+					      		<p class="sub-title">керамический</p>
+					      		<button class='btn'>ознакомиться</button>
+				      		</div>
+				      </div>
+				      <div class="swiper-slide">
+				      		<img src="images/head_slide.jpg" alt="">
+				      		<div class="wrap">
+				      			<p class="title">акции и спецпредложения</p>
+					      		<p class="sub-title"></p>
+					      		<button class='btn'>ознакомиться</button>
+				      		</div>
+				      </div>
+				    </div>  
+				    <div class="scroll-bottom">
+					  	<hr>
+					  	<p>scroll</p>
+					</div>
+				</div>
+				<div class="tab-featured">
+					<img src="/images/tab-feat.jpg" alt="">
+					<button>
+						товары по категориям
+					</button>
+				</div>
+			</div>
+
+		</container>
+		<container class="region-slider-new">
+			<div class="wrapper slider-new">
+				<h1>новинки</h1>
+				  <div class="swiper-container-new">
+				    <div class="swiper-wrapper">
+				      <div class="swiper-slide">
+				      	<div class="product">
+				      		<div class="product-img">
+				      			<img src="images/slider-img.jpg" alt="">
+				      			<div class="to-cart">
+				      				<p>в корзину</p>
+				      			</div>
+				      		</div>
+				      		<div class="title">
+				      			Винный кувшин
+				      		</div>
+				      		<div class="stars">
+								<fieldset class="rating">
+								    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+								    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+								    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+								    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+								    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+								    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+								    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+								    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+								    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+								    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+								</fieldset>
+				      		</div>
+				      		<div class="price">
+				      			<span>112 грн</span>
+				      		</div>
+				      	</div>
+				      </div>
+				      <div class="swiper-slide">
+				      	<div class="product">
+				      		<div class="product-img">
+				      			<img src="images/slider-img.jpg" alt="">
+				      			<div class="to-cart">
+				      				<p>в корзину</p>
+				      			</div>
+				      		</div>
+				      		<div class="title">
+				      			Винный кувшин
+				      		</div>
+				      		<div class="stars">
+								<fieldset class="rating">
+								    <input type="radio" id="star10" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+								    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+								    <input type="radio" id="star9" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+								    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+								    <input type="radio" id="star8" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+								    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+								    <input type="radio" id="star7" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+								    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+								    <input type="radio" id="star6" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+								    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+								</fieldset>
+				      		</div>
+				      		<div class="price">
+				      			<span>112 грн</span>
+				      		</div>
+				      	</div>
+				      </div>
+				      <div class="swiper-slide">
+				      	<div class="product">
+				      		<div class="product-img">
+				      			<img src="images/slider-img.jpg" alt="">
+				      			<div class="to-cart">
+				      				<p>в корзину</p>
+				      			</div>
+				      		</div>
+				      		<div class="title">
+				      			Винный кувшин <br>
+				      			очень винный кувшин
+				      		</div>
+				      		<div class="stars">
+								<fieldset class="rating">
+								    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+								    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+								    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+								    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+								    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+								    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+								    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+								    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+								    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+								    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+								</fieldset>
+				      		</div>
+				      		<div class="price">
+				      			<span>112 грн</span>
+				      		</div>
+				      	</div>
+				      </div>
+				      <div class="swiper-slide">
+				      	<div class="product">
+				      		<div class="product-img">
+				      			<img src="images/slider-img.jpg" alt="">
+				      			<div class="to-cart">
+				      				<p>в корзину</p>
+				      			</div>
+				      		</div>
+				      		<div class="title">
+				      			Винный кувшин
+				      		</div>
+				      		<div class="stars">
+									<fieldset class="rating">
+								    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+								    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+								    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+								    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+								    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+								    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+								    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+								    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+								    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+								    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+								</fieldset>
+				      		</div>
+				      		<div class="price">
+				      			<span>112 грн</span>
+				      		</div>
+				      	</div>
+				      </div>
+				    </div>
+				  </div>
+			</div>
+		</container>
+		<container class="region-about">
+			<div class="wrapper">
+				<h1>о компании</h1>
+				<div class="content">
+					<div class="left-block">
+						<img src="images/about-1.jpg" alt="">
+					</div>
+					<div class="right-block">
+						<h2>Мы знаем толк <br>в керамике</h2>
+						<div class="about-img">
+							<img src="images/about-2.png" alt="">
+						</div>
+						
+						<p>Производство керамики – это процесс, известный с давних времен, который заключается в создании большого ряда продукции преимущественно из естественных глин, в частности, в сочетании с добавками минеральной и органической природы.</p>
+						
+					</div>
+				</div>
+			</div>
+		</container>
+		<container class="region-gift">
+			<div class="wrapper">
+				<h2>Получите подарок</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>
+				<button class='btn'>ознакомиться</button>
+			</div>
+		</container>
+		<container class="region-slider-stock">
+			<div class="wrapper slider-stock">
+				<h1>новинки</h1>
+				  <div class="swiper-container-stock">
+				    <div class="swiper-wrapper">
+				      <div class="swiper-slide">
+				      	<div class="product">
+				      		<div class="product-img">
+				      			<img src="images/slider-img.jpg" alt="">
+				      			<div class="to-cart">
+				      				<p>в корзину</p>
+				      			</div>
+				      		</div>
+				      		<div class="title">
+				      			Винный кувшин
+				      		</div>
+				      		<div class="stars">
+								<fieldset class="rating">
+								    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+								    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+								    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+								    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+								    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+								    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+								    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+								    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+								    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+								    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+								</fieldset>
+				      		</div>
+				      		<div class="price">
+				      			<span>112 грн</span>
+				      		</div>
+				      	</div>
+				      </div>
+				      <div class="swiper-slide">
+				      	<div class="product">
+				      		<div class="product-img">
+				      			<img src="images/slider-img.jpg" alt="">
+				      			<div class="to-cart">
+				      				<p>в корзину</p>
+				      			</div>
+				      		</div>
+				      		<div class="title">
+				      			Винный кувшин
+				      		</div>
+				      		<div class="stars">
+								<fieldset class="rating">
+								    <input type="radio" id="star10" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+								    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+								    <input type="radio" id="star9" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+								    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+								    <input type="radio" id="star8" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+								    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+								    <input type="radio" id="star7" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+								    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+								    <input type="radio" id="star6" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+								    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+								</fieldset>
+				      		</div>
+				      		<div class="price">
+				      			<span>112 грн</span>
+				      		</div>
+				      	</div>
+				      </div>
+				      <div class="swiper-slide">
+				      	<div class="product">
+				      		<div class="product-img">
+				      			<img src="images/slider-img.jpg" alt="">
+				      			<div class="to-cart">
+				      				<p>в корзину</p>
+				      			</div>
+				      		</div>
+				      		<div class="title">
+				      			Винный кувшин <br>
+				      			очень винный кувшин
+				      		</div>
+				      		<div class="stars">
+								<fieldset class="rating">
+								    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+								    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+								    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+								    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+								    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+								    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+								    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+								    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+								    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+								    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+								</fieldset>
+				      		</div>
+				      		<div class="price">
+				      			<span>112 грн</span>
+				      		</div>
+				      	</div>
+				      </div>
+				      <div class="swiper-slide">
+				      	<div class="product">
+				      		<div class="product-img">
+				      			<img src="images/slider-img.jpg" alt="">
+				      			<div class="to-cart">
+				      				<p>в корзину</p>
+				      			</div>
+				      		</div>
+				      		<div class="title">
+				      			Винный кувшин
+				      		</div>
+				      		<div class="stars">
+									<fieldset class="rating">
+								    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+								    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+								    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+								    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+								    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+								    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+								    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+								    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+								    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+								    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+								</fieldset>
+				      		</div>
+				      		<div class="price">
+				      			<span>112 грн</span>
+				      		</div>
+				      	</div>
+				      </div>
+				    </div>
+				  </div>
+			</div>
+		</container>
+	</main>
+	<footer>
+		<div class="nav-footer">
+			<ul>
+				<li><a href="">Главная</a></li>
+				<li><a href="">Каталог</a></li>
+				<li><a href="">О нас</a></li>
+				<li><a href="">Контакты</a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="left-block">
+				<span class="title">Подпишитесь на нас</span>
+				<div class="social">
+					<a href=""><img src="images/facebook.png" alt=""></a>
+					<a href=""><img src="images/youtube.png" alt=""></a>
+					<a href=""><img src="images/vk.png" alt=""></a>
+				</div>
+			</div>
+			<div class="center-block">
+				<div class="logo">
+					<a href="#"><img src="images/logo.png" alt=""></a>
+				</div>
+			</div>
+			<div class="right-block">
+				 <form>
+					<span>Подпишитесь<br>на нашу рассылку</span>
+					<input class="input-group-field" type="email" placeholder="Ваш Email" required>
+					<button></button>
+ 				 </form>
+			</div>
+		</div>
+		<div class="copy">
+				<div>Дизайн и разработка</div>
+				<img src="images/footer-logo.png" alt="">
+			</div>
+	</footer>
+				      				      		
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/script.js"></script>
+<script src="node_modules/swiper/dist/js/swiper.min.js"></script>
+
+</body>
+</html>
+
+

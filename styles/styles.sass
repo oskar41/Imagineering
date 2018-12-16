@@ -1,0 +1,708 @@
+@import "./burger"
+@import "./fonts.sass"
+@import "./rating.sass"
+
+$color: #605147
+
+*   
+	margin: 0
+	padding: 0
+	border: 0
+
+body
+	font-size: 24px
+	font-family: 'BaufraB' 
+
+h1
+	margin: 1.5em 0 1em 0
+	margin-right: 250px
+	font-size: 1.5em
+	text-align: center
+	text-transform: uppercase
+	color: $color
+	@media screen and (max-width: 480px)
+		font-size: 1em
+		margin-right: 100px
+h2
+	font-size: 2em
+	font-family: 'BaufraM'
+	color: $color
+	font-weight: unset
+	@media screen and (max-width: 480px)
+		font-size: 1em
+	
+
+.clearfix::after 
+  content: ""
+  clear: both
+  display: table
+
+button.btn
+	margin-top: 25px
+	padding: 0 15px
+	font-size: 14px
+	line-height: 40px
+	color: #fff
+	background: inherit
+	font-family: 'Baufra'
+	text-transform: uppercase
+	border-radius: 10px
+	border: 1px solid #628721
+	outline: none
+	transition: .3s
+	&:active
+		transform: scale(0.8)
+
+a
+	color: $color
+	text-decoration: none
+	&:hover
+		text-decoration: underline
+
+.visible
+	display: block !important
+/////////////////////////////////////////////////////////////////////////////
+//HEADER
+/////////////////////////////////////////////////////////////////////////////
+
+header
+	padding-bottom: 6px
+	.wrapper
+		display: flex
+		justify-content: space-between
+		padding: 20px 60px 20px 40px
+		box-shadow: 0px 2px 10px 0px rgba(89,89,89,1)
+		@media screen and (max-width: 960px)
+			padding: 8px 50px
+		@media screen and (max-width: 600px)
+			padding: 8px 10px
+			justify-content: flex-start
+	.left-group
+		display: flex
+		&>div
+			margin: auto
+		@media screen and (max-width: 600px)
+			margin-right: 5%
+			img
+				width: 100%
+				max-width: 35px
+		.menu
+			margin-right: 35px
+			@media screen and (max-width: 600px)
+				margin-right: 5%
+	.logo 
+		margin: auto 0
+		img
+			width: 100%
+			@media screen and (max-width: 960px)
+				max-width: 120px
+			@media screen and (max-width: 600px)
+				max-width: 85px
+	.right-group
+		display: flex
+		&>a
+			margin: auto
+			margin-left: 30px
+			img
+				width: 100%
+				@media screen and (max-width: 600px)
+					max-width: 35px
+
+		.cart
+			position: relative
+			&:before
+				content: '2'
+				position: absolute
+				right: 33px
+				top: 10px
+				width: 25px
+				height: 25px
+				line-height: 25px
+				text-align: center
+				font-size: 14px
+				color: #fff
+				background: #ffd800
+				border-radius: 50%
+		@media screen and (max-width: 960px)
+			.login
+				display: none
+.lang-block
+	position: fixed
+	z-index: 99
+	width: 50px
+	top: 200px
+	right: 0
+	height: 130px
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75)
+	text-align: center
+	background: #fff
+	span
+		display: block
+		margin: 15px 0
+		font-family: 'Baufra'
+		font-size: 18px
+		color: #605147
+		cursor: pointer
+		&:hover
+			font-weight: bold
+			text-decoration: none
+		&.activeLink
+			font-weight: bold
+	@media screen and (max-width: 960px)
+		display: none
+
+.reg-form
+	display: none
+	position: absolute
+	z-index: 999
+	right: 100px
+	top: 100px
+	width: 590px
+	background: #fff
+	form
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		padding: 35px 15px 30px 15px
+		.form-row
+			margin-bottom: 20px
+			input
+				width: 220px
+				padding: 0 20px
+				line-height: 45px
+				font-family: 'Baufra'
+				font-size: 14px
+				color: $color
+				border: 1px solid $color
+				border-radius: 5px
+				outline: none
+		.form-row-submit
+			width: 260px
+			input
+				border-radius: 50px
+				background: #628721
+				color: #fff
+		.change_link
+			padding-top: 15px
+			width: 100%
+			font-size: 14px
+			font-family: "Baufra"
+			text-align: center
+			color: $color
+			border-top: 1px solid $color
+			span
+				color: #565e7b
+				text-decoration: underline
+				cursor: pointer
+
+.log-form
+	display: none
+	position: absolute
+	z-index: 999
+	right: 100px
+	top: 100px
+	width: 390px
+	background: #fff
+	form
+		padding: 30px 50px
+		text-align: center
+		.form-row
+			margin-bottom: 20px
+			input
+				width: 220px
+				padding: 0 20px
+				line-height: 45px
+				font-family: 'Baufra'
+				font-size: 14px
+				color: $color
+				border: 1px solid $color
+				border-radius: 5px
+				outline: none
+		.form-row-submit
+			float: left
+			width: 50%
+			input
+				width: 100%
+				border-radius: 50px
+				background: #628721
+				color: #fff
+		.form-row-pass
+			float: left
+			width: 50%
+			margin-top: 15px
+			font-size: 14px
+			font-family: "Baufra"
+			color: #565e7b
+			text-decoration: underline
+		.change_link
+			float: left
+			padding-top: 15px
+			width: 100%
+			font-size: 14px
+			font-family: "Baufra"
+			text-align: center
+			color: $color
+			border-top: 1px solid $color
+			span
+				color: #565e7b
+				text-decoration: underline
+				cursor: pointer
+
+.cart-form
+	display: none
+	position: absolute
+	width: 600px
+	z-index: 999
+	right: 100px
+	top: 100px
+	padding: 15px
+	background: #fff
+	.product
+		display: flex
+		justify-content: space-around
+		padding-bottom: 20px
+		font-family: "Baufra"
+		.count
+			width: 30px
+			text-align: center
+			border-radius: 20px
+			color: $color
+			border: 1px solid $color
+			span
+				display: block
+		.product-image
+			margin-right: 10px
+		.descr
+			width: 40%
+			margin: auto
+			font-size: 14px
+
+			color: $color
+		.price
+			width: 20%
+			margin: auto
+		.close
+			margin: auto
+	.buy
+		float: left
+		padding-top: 15px
+		width: 100%
+		font-size: 20px
+		font-family: "Baufra"
+		text-align: center
+		color: $color
+		border-top: 1px solid $color
+		button
+			display: block
+			margin: 0 auto
+			margin-top: 15px
+			color: $color
+
+.menu-button 
+	display: inline-block
+	padding: .5em
+	background-color: #fafafa
+	@media screen and (max-width: 600px)
+		padding: .2em
+
+
+.burger-icon 
+	@include burger(40px, 3px, 10px, $color)
+
+.burger-icon, 
+.burger-icon::before, 
+.burger-icon::after
+	@media screen and (max-width: 600px)
+		width: 30px
+		height: 2px
+	
+
+.menu-button.is-active .burger-icon 
+	@include burger-to-cross
+
+/////////////////////////////////////////////////////////////////////////////
+//FEATURED
+/////////////////////////////////////////////////////////////////////////////
+
+.region-featured
+	position: relative
+	.swiper-container 
+		width: 100%
+		// height: 860px
+		.swiper-slide
+			height: 860px
+			margin-top: 120px
+			img
+				position: absolute
+				top: -300px
+			.wrap
+				position: absolute
+				top: 50%
+				left: 50%
+				margin-right: -50%
+				transform: translate(-50%, -50%)
+				font-size: 30px
+				line-height: 30px
+				letter-spacing: 3px
+				text-align: center
+				color: #fff
+				.title,
+				.sub-title
+					font-family: 'BaufraDB' 
+				.title
+					text-transform: uppercase
+	.swiper-pagination
+		top: 0
+		left: 0
+		bottom: unset !important
+		height: 120px
+		display: flex
+		justify-content: space-between
+	
+		  	
+	.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+		width: 100%
+		height: 100%
+		margin: 0
+		background: #eaeae9
+		border-radius: unset 
+		opacity: 1
+		background-repeat: no-repeat
+		background-position: center
+		transition: .5s
+		
+	
+		&.swiper-pagination-bullet-active
+			background: #fff
+			background-repeat: no-repeat
+			background-position: center
+		&.slide0
+			background-image: url(../images/sliderTop/slide1.png) 
+			&.swiper-pagination-bullet-active
+				background-image: url(../images/sliderTop/slide1-ac.png)
+		&.slide1
+			background-image: url(../images/sliderTop/slide2.png)
+			&.swiper-pagination-bullet-active
+				background-image: url(../images/sliderTop/slide2-ac.png)
+		&.slide2
+			background-image: url(../images/sliderTop/slide3.png)
+			&.swiper-pagination-bullet-active
+				background-image: url(../images/sliderTop/slide3-ac.png)				
+		&.slide3
+			background-image: url(../images/sliderTop/slide4.png)
+			&.swiper-pagination-bullet-active
+				background-image: url(../images/sliderTop/slide4-ac.png)	
+		&.slide4
+			background-image: url(../images/sliderTop/slide5.png)
+			&.swiper-pagination-bullet-active
+				background-image: url(../images/sliderTop/slide5-ac.png)
+		&.slide5
+			background-image: url(../images/sliderTop/slide6.png)
+			&.swiper-pagination-bullet-active
+				background-image: url(../images/sliderTop/slide6-ac.png)
+
+	.scroll-bottom
+		position: absolute
+		z-index: 999
+		bottom: 0
+		left: 50%
+		transform: translate(-50%, -50%)
+		color: #fff
+		hr
+			width: 1px
+			height: 30px
+			margin: 0 auto
+			margin-bottom: 7px
+			background-color: #fff
+		p
+			font-family: 'BaufraB' 
+			font-size: 16px
+			text-transform: uppercase
+	@media screen and (max-width: 960px)
+		.swiper-container 
+			display: none !important
+	.tab-featured
+		display: none
+		position: relative
+		img
+			width: 100%
+			height: auto
+		button
+			position: absolute
+			bottom: 18px
+			left: 50%
+			transform: translate(-50%, 0)
+			padding: 0 10%
+			font-size: 14px
+			font-family: 'BaufraSB' 
+			line-height: 40px
+			background: inherit
+			color: #fff
+			border: 1px solid #fff
+			border-radius: 5px
+			text-transform: uppercase
+			outline: none
+			@media screen and (max-width: 960px)
+				transform: unset
+				left: 10%
+
+
+		@media screen and (max-width: 960px)
+			display: block
+/////////////////////////////////////////////////////////////////////////////
+//SLIDERS
+/////////////////////////////////////////////////////////////////////////////
+.slider-stock
+    margin-bottom: 50px
+.slider-new,
+.slider-stock
+	display: block
+	position: relative
+	width: 100%
+	.swiper-container-new,
+	.swiper-container-stock
+		width: 100%
+		height: 100%
+		//padding: 0 15px
+		overflow: hidden
+		.product
+			position: relative
+			max-width: 360px
+			margin: 0 auto
+			padding-top: 30px
+			// padding-top: 6%
+			// padding-bottom: 10%
+			padding-bottom: 50px
+			text-align: center
+			@media screen and (max-width: 960px)
+				padding: 20px 40px 40px 40px
+			.product-img
+				position: relative
+				img
+					display: block
+					width: 100%
+					height: auto
+				.to-cart
+					position: absolute
+					top: 0
+					right: 0
+					height: 100%
+					width: 65px
+					background: #ffd800
+					border-bottom-left-radius: 20px
+					border-top-left-radius: 20px
+					opacity: 0
+					transition: .3s
+					@media screen and (max-width: 960px)
+						width: 40px
+					&:before
+						content: url(../images/cart-icon.png)
+						position: absolute
+						top: 30px
+						left: 20px
+						@media screen and (max-width: 960px)
+							top: 5%
+							left: 30%
+					p
+						position: absolute
+						min-width: 150px
+						top: 50%
+						left: 50%
+						transform: translate(-50%, -50%) rotate(-90deg)
+						color: #fff
+						text-transform: uppercase
+						@media screen and (max-width: 960px)
+							font-size: 14px
+			.title
+				font-size: 20px
+				color: $color
+				@media screen and (max-width: 960px)
+					font-size: 14px
+			.stars
+				position: absolute
+				bottom: 10px
+				left: 50%
+				margin-right: -50%
+				transform: translate(-50%, 0)
+			.price
+				position: absolute
+				bottom: 10px
+				right: 0
+				@media screen and (max-width: 960px)
+					font-size: 14px
+					right: 40px
+				@media screen and (max-width: 830px)
+					bottom: -5px
+				
+			&:hover .to-cart
+				opacity: 1
+
+/////////////////////////////////////////////////////////////////////////////
+//ABOUT
+/////////////////////////////////////////////////////////////////////////////	
+.region-about
+	.content
+		display: flex
+		max-width: 1265px
+		margin: 0 auto
+		padding-bottom: 65px
+		@media screen and (max-width: 1400px)
+			max-width: 840px
+		@media screen and (max-width: 600px)
+			flex-wrap: wrap
+		.left-block	
+			float: left
+			width: 100%
+			margin-right: 35px
+			@media screen and (max-width: 1400px)
+				width: 30%
+				img
+					width: 100%
+					height: auto
+			@media screen and (max-width: 600px)
+				width: 100%
+				padding: 0 10%
+				margin-right: 0
+		.right-block
+			float: left
+			margin: 0 auto
+			@media screen and (max-width: 1400px)
+				width: 60%
+			@media screen and (max-width: 400px)
+				width: 100%
+			h2
+				margin-bottom: 55px
+				text-align: center
+			.about-img
+				float: right
+				@media screen and (max-width: 1400px)
+					width: 40%
+				@media screen and (max-width: 960px)
+					width: 100%
+			img
+				width: 100%
+				padding-left: 60px
+				@media screen and (max-width: 1400px)
+					padding-left: 30px
+				@media screen and (max-width: 960px)
+					max-width: 220px
+			p
+				font-family: 'BaufraDB'
+				font-size: 18px
+
+/////////////////////////////////////////////////////////////////////////
+//GIFT
+/////////////////////////////////////////////////////////////////////////
+.region-gift
+	display: block
+	background: url(../images/gift.jpg)
+	background-position: center
+	.wrapper
+		max-width: 580px
+		margin-left: 20%
+		padding: 70px 0 65px 0
+		text-align: center
+		color: #fff	
+		@media screen and (max-width: 960px)
+			width: 30%
+		h2
+			margin-bottom: 30px
+			font-size: 48px
+			color: #fff	
+			@media screen and (max-width: 960px)
+				font-size: 1em
+		p
+			font-size: 14px
+			@media screen and (max-width: 960px)
+				font-size: 10px
+		button
+			border-color: #fff
+
+/////////////////////////////////////////////////////////////////////////
+//FOOTER
+/////////////////////////////////////////////////////////////////////////
+
+footer
+	padding: 25px 0
+	.nav-footer
+		margin-bottom: 70px
+		ul
+			display: flex
+			justify-content: center
+			font-family: 'BaufraM'
+			list-style: none
+			@media screen and (max-width: 600px)
+				flex-wrap: wrap
+				text-align: center
+			li
+				padding: 0 30px
+				@media screen and (max-width: 600px)
+					width: 40%
+					padding: 0
+					padding-bottom: 20px
+	.content
+		display: flex
+		justify-content: center
+		text-align: center
+		color: #605147
+		@media screen and (max-width: 960px)
+			flex-direction: column-reverse
+		&>div
+			width: 33%
+			margin: auto
+			@media screen and (max-width: 600px)
+				width: 60%
+		.left-block
+			.title
+				display: inline-block
+				font-family: 'BaufraSB'
+				margin-bottom: 20px
+			.social a
+				margin: 0 5px
+		.center-block
+			@media screen and (max-width: 960px)
+				display: none
+		.logo img
+			width: 100%
+			max-width: 180px
+
+		.right-block
+			form
+				max-width: 400px
+				position: relative
+				@media screen and (max-width: 960px)
+					max-width: unset
+					margin-bottom: 40px
+			span
+				display: block
+				font-family: 'BaufraSB'
+				margin-bottom: 30px
+			.input-group-field
+				width: 100%
+				max-width: 400px
+				font-family: 'Baufra'
+				font-size: 1em
+				outline: none
+				border-bottom: 1px solid #000
+				@media screen and (max-width: 600px)
+					font-size: 18px
+			button
+				position: absolute
+				right: 0px
+				bottom: 2px
+				width: 13px
+				height: 25px
+				background-image: url(../images/btn-arrow.png)
+				background-color: #fff
+				outline: none
+				cursor: pointer
+	.copy
+		margin-top: 40px
+		text-align: center
+		
+
+
+	
+
+
+  
